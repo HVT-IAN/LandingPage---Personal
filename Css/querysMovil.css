@@ -1,4 +1,4 @@
-@media (max-width: 400px) {
+@media (max-width: 768px) {
 
     body {
         overflow-x: hidden;
@@ -7,10 +7,11 @@
     }
 
     .FuenteTitulos {
-        font-size: 46px;
+        font-size: 30px;
         margin: 30px;
         margin-bottom: -14px;
     }
+
 
     .subtituloTitulo {
         font-size: 12px;
@@ -18,37 +19,35 @@
     }
 
     #menuOpciones ul {
-        font-size: 26px;
+        font-size: 24px;
         margin-top: 9%;
         margin-left: -20px;
     }
 
     .contenedorProyectos {
         grid-template-columns: minmax(0, 1fr);
-        gap: 20px;
+        gap: 25px;
     }
 
     .listaProyectos {
-        margin-left: -10px;
+        margin-left: -15px;
     }
 
     .listaProyectos button {
-        font-size: 20px;
+        font-size: 14px;
     }
 
 
     .proyectosDetalles h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .contenedorProyectos .proyectosDetalles {
         display: flex;
         flex-direction: column;
         row-gap: 10px;
-        margin: 0 var(--insetMovil);
+        margin: 40px;
     }
-
-
 
     .contenedorProyectos .proyectosDetalles>* {
         margin: 0;
@@ -76,7 +75,7 @@
         max-width: 100%;
         max-height: none;
         margin-left: var(--insetMovil);
-        text-align: left;
+        text-align: justify;
     }
 
     .contenedor-informacion img {
@@ -87,7 +86,7 @@
 
     .proyectosDetalles p {
         max-width: 100%;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .fuenteTituloSeccion {
@@ -102,7 +101,7 @@
 
     .fuenteTituloSeccion2 {
         font-size: 40px;
-        left: auto;
+        left: 120px;
         right: calc(var(--margenMovil) + 6px);
         top: auto;
         bottom: 12%;
@@ -159,24 +158,10 @@
         gap: 14px;
         padding: 20px;
     }
-}
-
-@media (max-width: 340px) {
-    .FuenteTitulos {
-        font-size: 32px;
-    }
-
-    .subtituloTitulo {
-        font-size: 11px;
-    }
-
-    #menuOpciones ul {
-        font-size: 19px;
-    }
 
     .contenedor-informacion {
-        margin-left: var(--insetMovil);
-        margin-right: var(--insetMovil);
+        margin-left: calc(var(--insetMovil) + var(--aire));
+        margin-right: calc(var(--insetMovil) + var(--aire));
     }
 
     .listaProyectos {
@@ -184,54 +169,9 @@
     }
 
     .listaProyectos button {
-        font-size: 17px;
-    }
-
-    .fuenteTituloSeccion,
-    .fuenteTituloSeccion2 {
-        font-size: 36px;
-    }
-
-    .gridOndas {
-        grid-template-columns: repeat(8, 1fr);
-        gap: 8px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 326px) {
-    .FuenteTitulos {
-        font-size: 30px;
-    }
-
-    #menuOpciones ul {
-        font-size: 17px;
-    }
-
-    .listaProyectos button {
         font-size: 16px;
     }
 
-    .proyectosDetalles h2 {
-        font-size: 18px;
-        margin-bottom: 24px;
-    }
-
-    .fuenteTituloSeccion,
-    .fuenteTituloSeccion2 {
-        font-size: 30px;
-    }
-
-    .gridOndas {
-        grid-template-columns: repeat(6, 1fr);
-        gap: 6px;
-        padding: 8px;
-    }
-
-    /* Con la fila de tecnologias la foto se salia de la pantalla a 320x568, y como
-       .contenedor-informacion es position: fixed el scroll del body no la
-       alcanzaba. Bajando la foto a 120 y apretando los margenes de la fila
-       queda un margen de verdad por si la fuente real ocupa mas que la de aqui. */
     .contenedor-informacion img {
         max-width: 120px;
         max-height: 120px;
@@ -244,6 +184,15 @@
 
     .contenedor-informacion .listaTecnologias {
         margin-top: 10px;
-        gap: 12px;
+        gap: 10px;
+    }
+
+    .cabecera:not(.visible) .FuenteTitulos {
+        position: fixed;
+        top: 25px;
+        left: 30px;
+        margin: 0;
+        font-size: 20px;
+        z-index: 5;
     }
 }

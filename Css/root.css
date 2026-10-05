@@ -7,5 +7,9 @@
        esta en 20..21.5, o sea encima. Para sangrir hay que usar estos. */
     --inset: calc(var(--margen) + 2px);
     --insetMovil: calc(var(--margenMovil) + 2px);
+    /* --inset deja el texto a 0.5px de la linea: ya esta dentro, pero va pegado.
+       --aire es el minimo de hueco que se pide entre la linea y el texto, y se
+       suma encima del inset. */
+    --aire: 5px;
     --colorMargen: transparent;
 }
