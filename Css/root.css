@@ -1,0 +1,11 @@
+:root {
+    --margen: 40px;
+    --margenMovil: 20px;
+    /* El ancho de la banda NO cuenta su propio borde de 1.5px, asi que la linea
+       queda en --margen .. --margen + 1.5. El contenido no puede usar la banda
+       como sangria: con margin: var(--margenMovil) arrancaba en x20 y la linea
+       esta en 20..21.5, o sea encima. Para sangrir hay que usar estos. */
+    --inset: calc(var(--margen) + 2px);
+    --insetMovil: calc(var(--margenMovil) + 2px);
+    --colorMargen: transparent;
+}

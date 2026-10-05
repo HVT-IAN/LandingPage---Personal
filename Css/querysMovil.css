@@ -1,0 +1,249 @@
+@media (max-width: 400px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: none;
+    }
+
+    .FuenteTitulos {
+        font-size: 46px;
+        margin: 30px;
+        margin-bottom: -14px;
+    }
+
+    .subtituloTitulo {
+        font-size: 12px;
+        margin-left: 30px;
+    }
+
+    #menuOpciones ul {
+        font-size: 26px;
+        margin-top: 9%;
+        margin-left: -20px;
+    }
+
+    .contenedorProyectos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .listaProyectos {
+        margin-left: -10px;
+    }
+
+    .listaProyectos button {
+        font-size: 20px;
+    }
+
+
+    .proyectosDetalles h2 {
+        font-size: 20px;
+    }
+
+    .contenedorProyectos .proyectosDetalles {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin: 0 var(--insetMovil);
+    }
+
+
+
+    .contenedorProyectos .proyectosDetalles>* {
+        margin: 0;
+    }
+
+    .contenedorProyectos .proyectosDetalles #detalle-titulo {
+        order: 1;
+    }
+
+    .contenedorProyectos .proyectosDetalles #detalle-fecha {
+        order: 2;
+    }
+
+    .contenedorProyectos .proyectosDetalles #detalle-descripcion {
+        order: 3;
+    }
+
+    .contenedorProyectos .proyectosDetalles #detalle-imagen {
+        order: 4;
+        max-width: 180px;
+        margin-top: 10px;
+    }
+
+    .contenedor-informacion {
+        max-width: 100%;
+        max-height: none;
+        margin-left: var(--insetMovil);
+        text-align: left;
+    }
+
+    .contenedor-informacion img {
+        max-width: 150px;
+        max-height: 150px;
+        margin-top: 18px;
+    }
+
+    .proyectosDetalles p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .fuenteTituloSeccion {
+        font-size: 40px;
+        left: var(--margenMovil);
+        right: auto;
+        top: auto;
+        bottom: 10px;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .fuenteTituloSeccion2 {
+        font-size: 40px;
+        left: auto;
+        right: calc(var(--margenMovil) + 6px);
+        top: auto;
+        bottom: 12%;
+        pointer-events: none;
+    }
+
+    .margenIzquierdo {
+        top: var(--margenMovil);
+        bottom: var(--margenMovil);
+        left: 0;
+        width: var(--margenMovil);
+    }
+
+    .margenDerecho {
+        top: var(--margenMovil);
+        bottom: var(--margenMovil);
+        right: 0;
+        width: var(--margenMovil);
+    }
+
+    .margenSuperior {
+        left: var(--margenMovil);
+        right: var(--margenMovil);
+        top: 0;
+        height: var(--margenMovil);
+    }
+
+    .margenInferior {
+        left: var(--margenMovil);
+        right: var(--margenMovil);
+        bottom: 0;
+        height: var(--margenMovil);
+    }
+
+    .iconosContacto {
+        top: var(--insetMovil);
+        left: auto;
+        right: var(--insetMovil);
+        gap: 5px;
+    }
+
+    .iconosContacto img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .lineaHorizontal,
+    .leyendaHorizontal {
+        display: none;
+    }
+
+    .gridOndas {
+        grid-template-columns: repeat(16, 1fr);
+        gap: 14px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 340px) {
+    .FuenteTitulos {
+        font-size: 32px;
+    }
+
+    .subtituloTitulo {
+        font-size: 11px;
+    }
+
+    #menuOpciones ul {
+        font-size: 19px;
+    }
+
+    .contenedor-informacion {
+        margin-left: var(--insetMovil);
+        margin-right: var(--insetMovil);
+    }
+
+    .listaProyectos {
+        margin-left: var(--insetMovil);
+    }
+
+    .listaProyectos button {
+        font-size: 17px;
+    }
+
+    .fuenteTituloSeccion,
+    .fuenteTituloSeccion2 {
+        font-size: 36px;
+    }
+
+    .gridOndas {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 8px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 326px) {
+    .FuenteTitulos {
+        font-size: 30px;
+    }
+
+    #menuOpciones ul {
+        font-size: 17px;
+    }
+
+    .listaProyectos button {
+        font-size: 16px;
+    }
+
+    .proyectosDetalles h2 {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+
+    .fuenteTituloSeccion,
+    .fuenteTituloSeccion2 {
+        font-size: 30px;
+    }
+
+    .gridOndas {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
+        padding: 8px;
+    }
+
+    /* Con la fila de tecnologias la foto se salia de la pantalla a 320x568, y como
+       .contenedor-informacion es position: fixed el scroll del body no la
+       alcanzaba. Bajando la foto a 120 y apretando los margenes de la fila
+       queda un margen de verdad por si la fuente real ocupa mas que la de aqui. */
+    .contenedor-informacion img {
+        max-width: 120px;
+        max-height: 120px;
+        margin-top: 12px;
+    }
+
+    .tituloTecnologias {
+        margin-top: 12px;
+    }
+
+    .contenedor-informacion .listaTecnologias {
+        margin-top: 10px;
+        gap: 12px;
+    }
+}

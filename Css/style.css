@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle, #000000 0.5px, transparent 0.6px);
+    background-size: 7px 7px;
+    background-attachment: fixed;
+}
+
+section {
+    display: none;
+    min-height: 100vh;
+}
+
+section.active {
+    display: block;
+    animation: slideEntrada 1.2s ease-in-out;
+}
+
+.cabecera {
+    display: block;
+}
+
+.cabecera.visible {
+    min-height: 100vh;
+}
+
+.cabecera:not(.visible) .subtituloTitulo {
+    display: none;
+}
+
+.cabecera:not(.visible) .FuenteTitulos {
+    position: fixed;
+    top: 8px;
+    left: 40px;
+    margin: 0;
+    font-size: 20px;
+    z-index: 5;
+}
+
+@keyframes slideEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menuPrincipal {
+    display: none;
+}
+
+.menuPrincipal.active {
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+.FuenteTitulos {
+    font-family: "Poppins", sans-serif;
+    margin: 70px;
+    margin-bottom: -40px;
+    font-size: 102px;
+    font-weight: 700;
+    transition: 0.5s ease;
+    color: #ffffff;
+    mix-blend-mode: difference;
+    -webkit-text-stroke: 1px #000000;
+}
+
+.FuenteTitulos:hover {
+
+    transform: scale(1.0035);
+    color: #515151;
+}
+
+.subtituloTitulo {
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 74px;
+    color: rgb(0, 0, 0);
+}
+
+.fuenteSecundaria {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.SeccionInformacion {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+}
+
+.listaProyectos {
+    margin-left: 70px;
+}
+
+.listaProyectos button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+    border: none;
+    padding: 10px 18px;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    transition: color 0.4s ease;
+}
+
+.listaProyectos button::before,
+.listaProyectos button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.listaProyectos button::before {
+    background-color: #c2c2c291;
+    transition: clip-path 0.3s ease;
+}
+
+.listaProyectos button::after {
+    background-color: #17171778;
+    transform: translate(10px, 10px) rotate(2deg);
+    transition: clip-path 0.4s ease-out;
+    opacity: 0.3;
+}
+
+.listaProyectos button:hover,
+.listaProyectos button.active {
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+}
+
+.listaProyectos button:hover::before,
+.listaProyectos button:hover::after,
+.listaProyectos button.active::before,
+.listaProyectos button.active::after {
+    clip-path: polygon(79% 17%, 0% 79%, 100% 79%);
+}
+
+.listaProyectos h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.descripcionBoton {
+    display: none;
+}
+
+.iconosContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 40px;
+    left: 7px;
+    z-index: 4;
+}
+
+.iconosContacto img {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+}
+
+.fuenteTituloSeccion {
+    position: fixed;
+    left: 43%;
+    bottom: 73%;
+    z-index: 0;
+    font-size: 152px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    -webkit-text-stroke: 1px #000000;
+    overflow: hidden;
+}
+
+.fuenteTituloSeccion2 {
+    position: fixed;
+    bottom: 15%;
+    left: 82%;
+    z-index: -1;
+    font-size: 152px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: white;
+    mix-blend-mode: difference;
+    -webkit-text-stroke: 1px #000000;
+}
+
+.fuenteTituloSeccion,
+.fuenteTituloSeccion2 {
+    display: none;
+    margin: 0;
+}
+
+#panel-proyectos.active~.fuenteTituloSeccion {
+    display: block;
+    animation: slideEntrada 1.2s ease-in-out;
+}
+
+#panel-informacion.active~.fuenteTituloSeccion2 {
+    display: block;
+    animation: slideEntradaGirada 1.2s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+@keyframes slideEntradaGirada {
+    from {
+        opacity: 0;
+        transform: rotate(-90deg) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-90deg) translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .gridOndas {
+        display: none;
+    }
+}

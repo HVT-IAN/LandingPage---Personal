@@ -1,0 +1,298 @@
+.lineaHorizontal {
+    position: fixed;
+    top: 120px;
+    width: 3px;
+    height: 90px;
+    left: 18px;
+    background-color: rgb(68, 68, 68);
+    z-index: 3;
+}
+
+.leyendaHorizontal {
+    position: fixed;
+    top: 275px;
+    left: -40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: medium;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+    transform: rotate(-90deg);
+}
+
+
+#menuOpciones ul {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 72px;
+    text-align: left;
+    margin-top: 6%;
+    margin-left: 2%;
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+}
+
+
+.rotacion1 {
+    transform: rotate(-3deg);
+}
+
+.rotacion2 {
+    transform: rotate(2deg);
+}
+
+
+.contenedor-informacion {
+    position: fixed;
+    top: 5%;
+    color: rgb(0, 0, 0);
+    max-width: 400px;
+    max-height: 300px;
+    text-align: justify;
+    margin-left: 70px;
+}
+
+.contenedor-informacion img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* --- Tecnologias, debajo de la bio ---
+   Los selectores de los iconos llevan DOS clases a proposito: querysMovil.css
+   pone ".contenedor-informacion img { margin-top: 18px }" para la foto, y como
+   ese selector es (0,1,1) y se carga despues, un ".listaTecnologias img" de
+   (0,1,1) perderia el empate. Con ".contenedor-informacion .listaTecnologias img"
+   ya no hay duda. */
+.tituloTecnologias {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: rgba(0, 0, 0, 0.55);
+    margin: 20px 0 0 0;
+    text-align: left;
+}
+
+.contenedor-informacion .listaTecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.contenedor-informacion .listaTecnologias img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+
+.barraLlenado {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    z-index: 1;
+    transition: color 1.2s ease;
+}
+
+.barraLlenado::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+    background-color: #c2c2c291;
+    z-index: -1;
+    transition: clip-path 0.3s ease;
+    opacity: 0.5;
+
+}
+
+.barraLlenado::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+    background-color: #61414178;
+    z-index: -2;
+    transform: translate(10px, 10px) rotate(2deg);
+    transition: clip-path 0.4s ease-out;
+    opacity: 0.3;
+}
+
+.barraLlenado:hover {
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+
+}
+
+.barraLlenado:hover::after {
+    clip-path: polygon(79% 17%, 0% 79%, 100% 79%);
+
+
+}
+
+.barraLlenado:hover::before {
+    clip-path: polygon(79% 17%, 0% 79%, 100% 79%);
+
+}
+
+.contenedorProyectos {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 25vw;
+    align-items: start;
+    padding-top: 15%;
+    padding-left: 0.5%;
+}
+
+.proyectosDetalles {
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    min-height: 0;
+}
+
+.proyectosDetalles h2 {
+    margin-bottom: 8px;
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.proyectosDetalles p {
+    max-width: 500px;
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    overflow-wrap: break-word;
+}
+
+.itemBoton {
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.itemBoton:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+#detalle-imagen {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+#detalle-imagen[hidden] {
+    display: none;
+}
+
+#detalle-fecha {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 0 28px;
+}
+
+.gridOndas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.gridOndas span {
+    width: 0.5px;
+    height: 2px;
+
+    background: rgb(114, 114, 114);
+    border-radius: 50%;
+    opacity: 0.5;
+    transform-origin: center;
+    animation: pulso 3s ease-in-out infinite;
+}
+
+@keyframes pulso {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scaleY(0.6);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scaleY(1.4);
+    }
+}
+
+.contenedor-margenes {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.margenIzquierdo,
+.margenDerecho,
+.margenSuperior,
+.margenInferior {
+    position: fixed;
+    background-color: var(--colorMargen);
+}
+
+.margenIzquierdo {
+    top: 40px;
+    bottom: 40px;
+    left: 0;
+    width: var(--margen);
+    border-right: 1.5px solid black;
+}
+
+.margenDerecho {
+    top: 40px;
+    bottom: 40px;
+    right: 0;
+    width: var(--margen);
+    border-left: 1.5px solid black;
+}
+
+.margenSuperior {
+    left: 40px;
+    right: 40px;
+    top: 0;
+    height: var(--margen);
+    border-bottom: 1.5px solid black;
+}
+
+.margenInferior {
+    left: 40px;
+    right: 40px;
+    bottom: 0;
+    height: var(--margen);
+    border-top: 1.5px solid black;
+}

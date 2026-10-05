@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Oscani — Portafolio</title>
+    <meta name="description"
+        content="Estudiante de ingenieria en software. Diseno de interfaces, experiencias visuales y desarrollo web.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/visuales.css">
+    <link rel="stylesheet" href="Css/root.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Poppins:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Css/three.css">
+    <link rel="stylesheet" href="Css/querysMovil.css">
+</head>
+
+<body>
+    <canvas id="escena3d"></canvas>
+    <div class="gridOndas"></div>
+    <header class="cabecera" id="inicio">
+        <h1 class="FuenteTitulos"><a href="#inicio" style="text-decoration: none;">IAN OSCANI</a></h1>
+        <h3 class="subtituloTitulo">Estudiante de ingenieria en software</h3>
+        <div class="iconosContacto">
+            <a href="https://www.instagram.com/hvtkndr_ian/">
+                <img src="https://cdn.svglogos.dev/logos/instagram-icon.svg" alt="Instagram" width="40" height="40">
+            </a>
+            <a href="https://github.com/HVT-IAN">
+                <img src="https://cdn.svglogos.dev/logos/github-icon.svg" alt="GitHub" width="40" height="40">
+            </a>
+        </div>
+        <span class="lineaHorizontal"></span>
+        <span class="leyendaHorizontal">REDES SOCIALES</span>
+        <div class="menuPrincipal">
+            <nav id="menuOpciones">
+                <ul>
+                    <li>
+                        <a href="#panel-proyectos" style="text-decoration: none;"
+                            class="barraLlenado rotacion1">PROYECTOS</a>
+                    </li>
+                    <li>
+                        <a href="#panel-informacion" style="text-decoration: none;"
+                            class="barraLlenado rotacion2">INFORMACION</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor-margenes">
+            <div class="margenSuperior"></div>
+            <div class="margenInferior"></div>
+            <div class="margenIzquierdo"></div>
+            <div class="margenDerecho"></div>
+        </div>
+        <section id="panel-proyectos">
+            <div class="contenedorProyectos">
+                <div class="listaProyectos">
+                    <div class="itemBoton">
+                        <button class="botonProyectos active" data-imagen="img/placeholder-proyecto.svg">
+                            DECO-ONE
+                        </button>
+                        <h6 class="fechaBoton">Agosto-2026 / Dev: Front</h6>
+                        <p class="descripcionBoton">Pagina web de renta de mobiliario y decoracion para un negocio
+                            personal.
+                        </p>
+                    </div>
+                    <div class="itemBoton">
+                        <button class="botonProyectos" data-imagen="img/placeholder-proyecto.svg">
+                            MEDs
+                        </button>
+                        <h6 class="fechaBoton">Septiembre-2026 / Dev: Front</h6>
+                        <p class="descripcionBoton">
+                            Aplicacion para dispositivos moviles de toma y control de
+                            medicamentos especializada a personas con transtornos de deficit de atencion en
+                            diferentes nivles.
+                        </p>
+                    </div>
+                </div>
+                <div class="proyectosDetalles">
+                    <img id="detalle-imagen" alt="">
+                    <h2 id="detalle-titulo"></h2>
+                    <h6 id="detalle-fecha"></h6>
+                    <p id="detalle-descripcion"></p>
+                </div>
+            </div>
+        </section>
+        <h2 class="fuenteTituloSeccion">PROYECTOS</h2>
+
+        <section id="panel-informacion">
+            <div class="contenedor-informacion">
+                <h2 class="fuenteSecundaria">BIO</h2>
+                <p class="SeccionInformacion">Mi nombre es Ian soy estudiante de la Universidad Politecnica de
+                    Chiapas
+                    en la carrera de ingenieria
+                    de
+                    software</p>
+                <p class="SeccionInformacion">Me gusta diseñar interfaces, crear experiencias visuales y
+                    desarrollar
+                    soluciones inovadoras,
+                    actualmente
+                    me encuentro explorando el mundo del desarrollo web, me gusta aprender nuevas tecnologias y
+                    aplicarlas
+                    en mis proyectos.</p>
+                <h3 class="tituloTecnologias">TECNOLOGIAS QUE USO</h3>
+                <ul class="listaTecnologias">
+                    <li><img class="iconoTecnologia" src="img/html5.svg" alt="HTML5" width="40" height="40"></li>
+                    <li><img class="iconoTecnologia" src="img/css3.svg" alt="CSS3" width="40" height="40"></li>
+                    <li><img class="iconoTecnologia" src="img/javascript.svg" alt="JavaScript" width="40" height="40">
+                    </li>
+                    <li><img class="iconoTecnologia" src="img/cpp.svg" alt="C++" width="40" height="40"></li>
+                </ul>
+                <img src="img/placeholder-foto.svg" alt="Espacio reservado para la foto" width="200" height="200">
+            </div>
+        </section>
+        <h2 class="fuenteTituloSeccion2">INFO</h2>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="JavaScript/three.js"></script>
+    <script src="JavaScript/script.js"></script>
+
+</body>
+
+</html>
