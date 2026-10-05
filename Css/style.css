@@ -91,17 +91,17 @@ a {
 
 .fuenteSecundaria {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: lighter;
     color: rgb(0, 0, 0);
 }
 
 .SeccionInformacion {
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: lighter;
     color: rgb(0, 0, 0);
+    padding: 0 var(--aire);
 }
 
 .listaProyectos {
